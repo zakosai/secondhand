@@ -1,0 +1,14 @@
+How to install project "Secondhand"
+
+  1. Install xampp
+
+  2. clone this project in this link "https://github.com/zakosai/secondhand.git" to "xampp\htdocs"
+  
+  3. Runing apache and mysql in xampp
+  
+  4. Take the user = "root", password = "root" in localhost/phpmyadmin
+  
+  5. Import file "data\secondhand.sql" to phpmyadmin
+  
+  6. Run localhost/secondhand in browser
+
