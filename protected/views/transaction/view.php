@@ -13,6 +13,9 @@ $this->menu=array(
 );
 
 $product = Product::model()->findByPk($model->productID);
+if (Yii::app()->request->cookies['userID']->value == $model->buyerID) $user = User::model()->findByPk($model->salerID);
+else $user = User::model()->findByPk($model->buyerID);
+
 ?>
 
 <h1>View Transaction</h1>
@@ -37,6 +40,10 @@ $product = Product::model()->findByPk($model->productID);
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
+                array(
+                    'name' => 'Partner',
+                    'value' => $user->email,
+                ),
 		'buyerConfirmation',
 		'salerConfirmation',
 		array(

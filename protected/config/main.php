@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Exchange Secondhand',
-
+        //'theme'=> 'tutorialzine1',
 	// preloading 'log' component
 	'preload'=>array('log'),
 

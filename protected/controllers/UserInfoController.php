@@ -94,7 +94,7 @@ class UserInfoController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['UserInfo']))
+		if(isset($_POST['UserInfo']) && $model->id == Yii::app()->request->cookies['userID']->value)
 		{
 			$model->attributes=$_POST['UserInfo'];
 			if($model->save())

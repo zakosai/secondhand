@@ -119,8 +119,10 @@ class ProductController extends Controller
 	public function actionIndex($catalogID = null, $kind = null, $min = null, $max = null)
 	{
                 $catalog = Catalog::model()->findAll();
-                $cons = "status = 0";
-                 if ($catalogID != null) $cons = $con." AND catalogID = $catalogID";
+                $cons = 'status = 0';
+ 
+                 if ($catalogID != null) $cons = $cons." AND catalogID = $catalogID";
+
                  if ($kind != null) $cons = $cons." AND kind = $kind";
                  if ($min != null) $cons = $cons." AND price >= $min";
                  if ($max != null) $cons = $cons." AND price < $max";

@@ -85,8 +85,8 @@ class PersonalProductController extends Controller {
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
-        if (isset($_POST['PersonalProduct'])) {
+        
+        if (isset($_POST['PersonalProduct']) && $model->userID == Yii::app()->request->cookies['userID']->value) {
             $model->attributes = $_POST['PersonalProduct'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
