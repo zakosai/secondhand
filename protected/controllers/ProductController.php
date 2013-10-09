@@ -120,7 +120,7 @@ class ProductController extends Controller
 	{
                 $catalog = Catalog::model()->findAll();
                 $cons = "status = 0";
-                 if ($catalogID != null) $cons = $con." AND catalogID = $catalogID";
+                 if ($catalogID != null) $cons = $cons." AND catalogID = $catalogID";
                  if ($kind != null) $cons = $cons." AND kind = $kind";
                  if ($min != null) $cons = $cons." AND price >= $min";
                  if ($max != null) $cons = $cons." AND price < $max";
